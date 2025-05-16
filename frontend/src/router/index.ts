@@ -10,6 +10,11 @@ const routes: RouteRecordRaw[] = [
     component: HomeView,
   },
   {
+    path: '/login',
+    name: 'login',
+    component: async (): Promise<RouteComponent> => await import('@/views/login/LoginPage.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: async (): Promise<RouteComponent> => await import('@/views/not-found/NotFound.vue'),
