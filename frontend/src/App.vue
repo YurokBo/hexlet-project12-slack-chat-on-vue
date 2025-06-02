@@ -6,10 +6,9 @@
         class="common-layout__header"
         mode="horizontal"
         :ellipsis="false"
-        @select="handleSelect"
       >
         <el-menu-item index="0">
-          <router-link :to="{ name: 'login' }" class="common-layout__logo-link">
+          <router-link :to="{ name: 'home' }" class="common-layout__logo-link">
             Hexlet Chat
           </router-link>
         </el-menu-item>

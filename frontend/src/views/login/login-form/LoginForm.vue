@@ -5,21 +5,22 @@
       :model="loginFormData"
       size="large"
       :rules="{
-      name: [{
-        required: true,
-        trigger: 'blur',
-        message: 'Enter your name'
-      }],
-      password: [{
-        required: true,
-        trigger: 'blur',
-        message: 'Enter your password'
-      }]
+        username: [{
+          required: true,
+          trigger: 'blur',
+          message: 'Enter your name'
+        }],
+        password: [{
+          required: true,
+          trigger: 'blur',
+          message: 'Enter your password'
+        }]
     }"
       label-position="top"
+      @submit.prevent
     >
-      <el-form-item label="Name" required prop="name">
-        <el-input v-model="loginFormData.name" placeholder="Enter name" />
+      <el-form-item label="Name" required prop="username">
+        <el-input v-model="loginFormData.username" placeholder="Enter name" />
       </el-form-item>
       <el-form-item label="Password" required prop="password">
         <el-input v-model="loginFormData.password" type="password" placeholder="Enter password" />
