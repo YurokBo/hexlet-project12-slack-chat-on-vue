@@ -6,6 +6,6 @@ export default class GetLoginRequest extends ApiResourceMethod<LoginFormResponse
   public perform(loginFormData: LoginForm): Promise<LoginFormResponse> {
     return this.performer.requestWithMapper(
       {data: loginFormData},
-      (payload: BaseResponse<LoginFormResponse>): LoginFormResponse => payload.data)
+      (payload: BaseResponse<LoginFormResponse>): LoginFormResponse => payload)
   };
 }

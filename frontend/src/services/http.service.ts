@@ -45,13 +45,10 @@ http.setInterceptor({
       return response;
     },
     onRejected(error) {
-      console.log(error)
       const { token } = storeToRefs(useAuthStore());
 
       if (authErrorCodes.includes(error.response?.status)) {
         token.value = null;
-
-        router.go(0);
       }
 
       if (error.response?.status === authForbiddenCode) {

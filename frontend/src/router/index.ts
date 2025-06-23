@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteComponent, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
 
 const BASE_URL = '/'
 
@@ -24,6 +24,17 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(BASE_URL),
   routes,
+});
+
+router.beforeEach(async (to, from, next) => {
+  const token = localStorage.getItem('token');
+
+  if (!token && to.name !== 'login') {
+    next({ name: 'login' });
+
+    return;
+  }
+    return next();
 })
 
 export default router
