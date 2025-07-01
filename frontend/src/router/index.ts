@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
-    component: async (): Promise<RouteComponent> => await import('@/views/login/LoginPage.vue'),
+    component: async (): Promise<RouteComponent> => await import('@/views/login/login-page.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
