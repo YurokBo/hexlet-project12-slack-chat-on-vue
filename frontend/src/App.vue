@@ -1,19 +1,7 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-menu
-        :default-active="activeIndex"
-        class="common-layout__header"
-        mode="horizontal"
-        :ellipsis="false"
-        @select="handleSelect"
-      >
-        <el-menu-item index="0">
-          <router-link :to="{ name: 'login' }" class="common-layout__logo-link">
-            Hexlet Chat
-          </router-link>
-        </el-menu-item>
-      </el-menu>
+      <MainMenu />
       <el-main class="common-layout__main">
         <RouterView />
       </el-main>
@@ -22,9 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-
-const activeIndex = ref('1')
+import MainMenu from '@/components/menu/main-menu.vue';
 </script>
 
 <style lang="scss">

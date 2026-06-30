@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts" setup>
-import LoginForm from '@/views/login/login-form/LoginForm.vue';
-import loginImage from '@/assets/images/login-image.png';
+import LoginForm from '@/views/login/login-form/login-form.vue';
+import loginImage from '@/assets/images/login-image.png'
 </script>
 <style lang="scss">
 .login-page {
